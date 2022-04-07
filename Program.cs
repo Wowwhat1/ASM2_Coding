@@ -13,19 +13,11 @@ namespace _1618
 
         static uint ValidationInput(string tempNumber)
         {
-            uint number;
         CheckPoint:
             bool checkInput = uint.TryParse(tempNumber, out uint result);
-            if (checkInput)
+            if (checkInput && result != 0)
             {
-                number = (uint.Parse(tempNumber));
-                if (number == 0)
-                {
-                    Console.WriteLine("Retype: ");
-                    tempNumber = Console.ReadLine();
-                    goto CheckPoint;
-                }
-                return number;
+                return result;
             }
             else
             {
