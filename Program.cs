@@ -19,6 +19,12 @@ namespace _1618
             if (checkInput)
             {
                 number = (uint.Parse(tempNumber));
+                if (number == 0)
+                {
+                    Console.WriteLine("Retype: ");
+                    tempNumber = Console.ReadLine();
+                    goto CheckPoint;
+                }
                 return number;
             }
             else
