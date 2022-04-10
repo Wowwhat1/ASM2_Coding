@@ -27,9 +27,9 @@ namespace _1618
             }
         }
 
-        static int SumOfDigit(int eachNumber)
+        static uint SumOfDigit(uint eachNumber)
         {
-            int modulo, sum = 0;
+            uint modulo, sum = 0;
             while (eachNumber != 0)
             {
                 modulo = eachNumber % 10;
@@ -39,16 +39,16 @@ namespace _1618
             return sum;
         }
 
-        static bool CheckSpecialNumber(int eachNumber)
+        static bool CheckSpecialNumber(uint eachNumber)
         {
             return SumOfDigit(eachNumber) == 5 || SumOfDigit(eachNumber) == 7 || SumOfDigit(eachNumber) == 11;
         }
 
         static void PrintResult(uint number)
         {
-            for (int i = 1; i <= number; i++)
+            for (uint i = 1; i <= number; i++)
             {
-                int eachNumber = i;
+                uint eachNumber = i;
                 SumOfDigit(eachNumber);
                 if (CheckSpecialNumber(eachNumber))
                     Console.WriteLine($"{i} => True");
